@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import './styles/partials/_navbar.scss';
+@import './styles/partials/_home.scss';
+@import './styles/partials/_cart.scss';
+@import './styles/partials/_place-order.scss';
+@import './styles/partials/_header.scss';
+@import './styles/partials/_explore-menu.scss';
+@import './styles/partials/_food-display.scss';
+@import './styles/partials/_food-item.scss';
+@import './styles/partials/_footer.scss';
+@import './styles/partials/_app-download.scss';
+@import './styles/partials/_login-popup.scss';
+@import './styles/partials/_verify.scss';
+@import './styles/partials/_my_orders.scss';
+@import './styles/partials/_previous-searches.scss';
+@import './styles/partials/_recipes-section.scss';
+@import './styles/partials/_addrecipe-form.scss';
+@import './styles/partials/_model.scss';
+@import './styles/partials/_animations.scss';
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-shadow: border-box;
+  font-family: outfit;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+@keyframes fadeIn{
+  0%{
+   opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

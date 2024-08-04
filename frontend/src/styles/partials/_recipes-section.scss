@@ -1,0 +1,214 @@
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 1.5em;
+    padding: 1em;
+}
+
+.recipe-card {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card-info {
+    padding: 15px;
+}
+
+.custom-image {
+    z-index: -1;
+    object-fit: cover;
+    display: block;
+}
+
+.custom-image img {
+    width: 100%;
+    height: 250px;
+    transition: transform 0.3s;
+}
+
+.custom-image img:hover {
+    transform: scale(1.05);
+}
+
+.author-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-top: -50px;
+    z-index: 2;
+    background-color: #fff; /* Ensures a background for the author image */
+}
+
+.recipe-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0.25em 0 0.5em;
+    color: black;
+}
+
+.recipe-desc {
+    color: black;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.view-btn {
+    font-size: 1em;
+    font-weight: bold;
+    color: tomato;
+    margin-top: 0.75em;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.view-btn:hover {
+    color: #ff6347;
+}
+
+.recipe-details {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #333;
+}
+
+.recipe-details ul,
+.recipe-details ol {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+.recipe-details ul li,
+.recipe-details ol li {
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+.recipe-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.recipe-details a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.recipe-details a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.recipe-details textarea,
+.recipe-details input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.recipe-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.recipe-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recipe-actions button:hover {
+    background-color: #0056b3;
+}
+
+.restore-button {
+    background-color: tomato;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add margin */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    transition: background-color 0.3s;
+}
+
+.restore-button:hover {
+    background-color: #a0456fef;
+}
+
+.addrecipe-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.addrecipe-button:hover {
+    background-color: #ff6347;
+    transform: rotate(90deg);
+}
+
+.button-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .recipe-card {
+        font-size: 0.9em;
+    }
+    
+    .view-btn {
+        font-size: 0.9em;
+    }
+    
+    .restore-button {
+        padding: 8px 16px;
+    }
+}
